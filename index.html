@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Converter</title>
+    <style>
+        *{
+            background-color: #121212;
+            color: #cf6679;
+        }
+       form{
+        padding: 70px 0;
+        text-align: center;
+        /* margin: 20px ; */
+        /* padding: 20px; */
+       }
+       #encodedtext{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 2px solid;
+        border-radius: 4px ;
+        color:#cf6679;
+        font-weight: bold;
+        width: 130px;
+       }
+       #entxt{
+        color:white;
+        font-weight: bold;
+        width: 130px;
+       }       
+       #detxt{
+        color:white;
+        font-weight: bold;
+        width: 130px;
+
+       }
+        #btnsub {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+        border: 3px solid;
+        padding: 0.25em 0.5em;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        #btnsub:active {
+        box-shadow: 0px 0px 0px 0px;
+        top: 5px;
+        left: 5px;
+        }
+
+        @media (min-width: 768px) {
+            #btnsub {
+            padding: 0.25em 0.75em;
+        }
+        }
+       #btnsub{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /* background-color: darkgray; */
+        border-radius: 4px;
+       }
+       
+       #btndesub {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+        border: 3px solid;
+        padding: 0.25em 0.5em;
+        box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+        #btndesub:active {
+        box-shadow: 0px 0px 0px 0px;
+        top: 5px;
+        left: 5px;
+        }
+
+        @media (min-width: 768px) {
+            #btndesub {
+            padding: 0.25em 0.75em;
+        }
+    }
+       #btndesub{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /* background-color:darkgray; */
+        border-radius: 4px;
+       }
+       #decodedtext{  
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 2px solid;
+        border-radius: 4px ;
+        color:#cf6679;
+        font-weight: bold;
+        width: 130px;
+        /* float: left; */
+       }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Base64 Encoder and Decoder</h1>
+        <label  id="entxt" for="entxt">Enter Text to Encode:</label>
+        <input id="entext"  placeholder="Encode" type="text" id="fname" name="fname" ><br>
+        <button id="btnsub" type="button" value="Encode" >Encode</button><br>
+        <label id="encodedtext">Encoded Text will be shown here</label><br><br>
+        <label id="detxt" for="entxt">Enter Text to Decode:</label>        
+        <input id="detext"  placeholder="Decode" type="text" id="fname" name="fname" ><br>
+        <button type="button" id="btndesub" value="Decode" >Decode</button><br>
+        <label id="decodedtext">Decoded Text will be shown here</label><br>
+
+        
+        <script>
+            document.querySelector("#btnsub").addEventListener("click",function(){
+                document.getElementById("encodedtext").innerHTML=window.btoa(document.getElementById("entext").value);});
+            document.querySelector("#btndesub").addEventListener("click",function(){
+                document.getElementById("decodedtext").innerHTML=window.atob(document.getElementById("detext").value);});
+
+        </script>
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+<!-- /* CSS */
+#btnsub {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#btnsub:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+    #btnsub {
+    padding: 0.25em 0.75em;
+  }
+} -->
